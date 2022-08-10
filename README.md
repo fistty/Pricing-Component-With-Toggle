@@ -27,7 +27,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Frontend Solution](https://www.frontendmentor.io/solutions/testimonials-grid-section-PPLELhktef)
-- Live Site URL: [Netlify Live Site](https://fistty-testimonial-grid-layout.netlify.app/)
+- Live Site URL: [Netlify Live Site](https://fistty-pricing-component.netlify.app/)
 
 ## My process
 
