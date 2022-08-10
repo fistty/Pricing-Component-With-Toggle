@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+/*============== HMTL RESET ==============*/
+*,
+*::before,
+*::after {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+/*============== VARIABLE DECLARATIONS ==============*/
+:root {
+  --background: hsl(240, 80%, 98%);
+  --faded-text-a-m: hsl(234, 14%, 74%);
+  --text: hsl(234, 13%, 49%);
+  --dark-blue: hsl(232, 13%, 33%);
+  --richer-blue: hsl(237, 68%, 73%);
+  --custom-blue: hsl(238, 63%, 64%);
+  --Mont: "Montserrat", sans-serif;
+  --300: 300;
+  --400: 400;
+  --500: 500;
+  --600: 600;
+  --700: 700;
+}
+/*============== ATTRIBUTION ==============*/
+.attribution {
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.8;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  color: var(--custom-blue);
+}
+
+/*============== BODY ==============*/
+body {
+  font-family: "Montserrat", sans-serif;
+  max-width: 100%;
+  min-height: 100vh;
+  z-index: 999;
+  position: relative;
+  background-color: var(--background);
+  padding-inline: 1.5rem;
+  margin: 0 auto;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  background-image: url("./images/bg-top.svg");
+  background-repeat: no-repeat;
+  top: -2.7%;
+  left: 52.7%;
+  right: 0%;
+  bottom: 0%;
+  z-index: -1;
+}
+
+/*============== HEADER ==============*/
+header {
+  text-align: center;
+  padding-top: 4.375rem;
+  color: var(--text);
+  font-weight: 700;
+}
+
+/*============== NAV ==============*/
+nav {
+  margin: 0 auto;
+  margin-top: 2.625rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  align-items: center;
+  max-width: 20.4375rem;
+}
+
+nav > h2,
+nav > h3 {
+  color: var(--faded-text-a-m);
+  font-size: 1rem;
+}
+
+/*============== TOGGLE BUTON ==============*/
+nav > button {
+  background-color: var(--richer-blue);
+  display: flex;
+  align-items: center;
+  width: 3.5rem;
+  height: 2rem;
+  border-radius: 3.125rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 300ms ease-out;
+  position: relative;
+  padding-inline: 0.4rem;
+}
+
+nav > button:hover {
+  background-color: #c7b5ff;
+}
+
+nav > button > .toggle-btn-circle {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 10.8%;
+}
+
+/*============== BUTTON ANIMATION ==============*/
+.ball-forward {
+  animation-name: ball-forward;
+  animation-duration: 200ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes ball-forward {
+  0% {
+    left: 10.8%;
+  }
+
+  100% {
+    left: 46.2%;
+  }
+}
+
+.ball-backward {
+  animation-name: ball-backward;
+  animation-duration: 200ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes ball-backward {
+  0% {
+    left: 46.2%;
+  }
+
+  100% {
+    left: 10.8%;
+  }
+}
+
+/*============== MAIN ==============*/
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.125rem;
+  margin: 0 auto;
+  margin-top: 5rem;
+  margin-bottom: 4.4375rem;
+}
+
+/*============== CARD ==============*/
+.card {
+  background-color: white;
+  text-align: center;
+  border-radius: 0.5rem;
+  box-shadow: 5px 22px 17px 0px hsl(240, 52%, 96%);
+}
+
+.card > .card-header {
+  margin-top: 2.25rem;
+  color: var(--text);
+}
+
+.card > .card-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3125rem;
+  margin-block: 1.3rem;
+  font-size: 72px;
+  color: var(--dark-blue);
+}
+
+.price-span {
+  font-size: 39px;
+  transform: translateY(1.225rem);
+}
+
+.monthly-price {
+  display: flex;
+  gap: 7px;
+}
+
+.annual-price {
+  display: flex;
+  gap: 7px;
+}
+
+.card > .card-main > p {
+  height: 3.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #dcdcdc;
+  margin-inline: 1.75rem;
+  color: var(--text);
+}
+
+.card > .card-main > p:last-child {
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.card > button {
+  margin-top: 2rem;
+  margin-bottom: 1.9375rem;
+  width: 16.8125rem;
+  height: 2.75rem;
+  border-radius: 0.3125rem;
+  background-color: var(--custom-blue);
+  color: white;
+  font-family: var(--Mont);
+  border: none;
+  cursor: pointer;
+  transition: background-color 300ms ease-out, color 300ms ease-out,
+    border 300ms ease-out, transform 300ms ease-out;
+}
+
+.card > button:hover {
+  background-color: transparent;
+  color: var(--custom-blue);
+  border: 1px solid var(--custom-blue);
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0.3rem 1rem;
+}
+
+.card1 > button:hover,
+.card3 > button:hover {
+  box-shadow: rgb(0 0 0 / 17%) 0px 0.3rem 1rem;
+}
+
+/*============== CARD2 ==============*/
+.card2 {
+  background-color: var(--custom-blue);
+}
+
+.card2 > .card-header {
+  color: white;
+}
+
+.card2 > .card-price {
+  color: white;
+}
+
+.card2 > .card-main > p {
+  color: white;
+}
+
+.card2 > button {
+  background-color: white;
+  color: var(--custom-blue);
+}
+
+.card2 > button:hover {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0.3rem 1rem;
+}
+
+/*============== CARD3 ==============*/
+
+@media screen and (min-width: 1060px) {
+  body::before {
+    content: "";
+    position: absolute;
+    background-image: url("./images/bg-top.svg");
+    background-repeat: no-repeat;
+    top: 1%;
+    left: 71.9%;
+    right: 0%;
+    bottom: 0%;
+    z-index: -1;
+  }
+
+  body::after {
+    content: "";
+    position: absolute;
+    background-image: url("./images/bg-bottom.svg");
+    background-repeat: no-repeat;
+    top: 64%;
+    left: 0%;
+    right: 60%;
+    bottom: 0%;
+    z-index: -1;
+  }
+
+  main {
+    flex-direction: row;
+    align-items: center;
+    gap: unset;
+  }
+
+  /*============== CARD ==============*/
+  .card {
+    min-width: 20.4375rem;
+  }
+
+  /*============== CARD1 ==============*/
+  .card1 {
+    border-top-right-radius: unset;
+    border-bottom-right-radius: unset;
+    box-shadow: -4px 22px 17px 5px hsl(240deg 52% 96%);
+    transition: all 300ms ease-out;
+  }
+
+  .card1:hover {
+    transform: translateX(-30px);
+    box-shadow: unset;
+    border: 1px solid var(--custom-blue);
+  }
+
+  /*============== CARD2 ==============*/
+  .card2 {
+    padding-block: 1.2rem;
+    box-shadow: 5px 22px 17px 0px hsl(240, 52%, 96%);
+    min-width: 20.6375rem;
+    transition: all 300ms ease-out;
+  }
+
+  .card2:hover {
+    transform: scale(1.05);
+  }
+
+  .card2 > button:hover {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+  }
+
+  /*============== CARD3 ==============*/
+  .card3 {
+    border-top-left-radius: unset;
+    border-bottom-left-radius: unset;
+    box-shadow: 12px 22px 17px 0px hsl(240deg 52% 96%);
+    transition: all 300ms ease-out;
+  }
+
+  .card3:hover {
+    transform: translateX(30px);
+    box-shadow: unset;
+    border: 1px solid var(--custom-blue);
+  }
+}
+
+.annual-price {
+  display: none;
+}
