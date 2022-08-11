@@ -19,15 +19,10 @@
   --richer-blue: hsl(237, 68%, 73%);
   --custom-blue: hsl(238, 63%, 64%);
   --Mont: "Montserrat", sans-serif;
-  --300: 300;
-  --400: 400;
-  --500: 500;
-  --600: 600;
-  --700: 700;
 }
 /*============== ATTRIBUTION ==============*/
 .attribution {
-  font-size: 16px;
+  font-size: 1rem;
   text-align: center;
   line-height: 1.8;
 }
@@ -101,7 +96,8 @@ nav > button {
 }
 
 nav > button:hover {
-  background-color: #c7b5ff;
+  background-color: #a1a1eb;
+
 }
 
 nav > button > .toggle-btn-circle {
@@ -193,8 +189,8 @@ main {
 }
 
 .annual-price {
-  display: flex;
-  gap: 7px;
+  display: none;
+  gap: 0.4375rem;
 }
 
 .card > .card-main > p {
@@ -337,7 +333,7 @@ main {
   }
 
   .card1:hover {
-    transform: translateX(-30px);
+    transform: translateX(-1.875rem);
     box-shadow: unset;
     border: 1px solid var(--custom-blue);
   }
@@ -369,12 +365,8 @@ main {
   }
 
   .card3:hover {
-    transform: translateX(30px);
+    transform: translateX(1.875rem);
     box-shadow: unset;
     border: 1px solid var(--custom-blue);
   }
-}
-
-.annual-price {
-  display: none;
 }
