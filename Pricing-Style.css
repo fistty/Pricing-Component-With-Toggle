@@ -116,7 +116,7 @@ nav > button > .toggle-btn-circle {
 /*============== BUTTON ANIMATION ==============*/
 .ball-forward {
   animation-name: ball-forward;
-  animation-duration: 200ms;
+  animation-duration: 100ms;
   animation-fill-mode: forwards;
   animation-timing-function: ease-out;
 }
@@ -133,7 +133,7 @@ nav > button > .toggle-btn-circle {
 
 .ball-backward {
   animation-name: ball-backward;
-  animation-duration: 200ms;
+  animation-duration: 100ms;
   animation-fill-mode: forwards;
   animation-timing-function: ease-out;
 }
@@ -269,7 +269,28 @@ main {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0.3rem 1rem;
 }
 
-/*============== CARD3 ==============*/
+@media screen and (min-width: 600px) {
+  main {
+    max-width: 400px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  main {
+    max-width: 400px;
+  }
+
+  body::before {
+    content: "";
+    position: absolute;
+    background-image: url("./images/bg-top.svg");
+    background-repeat: no-repeat;
+    top: 0%;
+    left: 70%;
+    right: 0%;
+    z-index: -1;
+  }
+}
 
 @media screen and (min-width: 1060px) {
   body::before {
