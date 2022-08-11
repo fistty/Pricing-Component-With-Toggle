@@ -97,7 +97,6 @@ nav > button {
 
 nav > button:hover {
   background-color: #abacec;
-
 }
 
 nav > button > .toggle-btn-circle {
@@ -107,6 +106,7 @@ nav > button > .toggle-btn-circle {
   border-radius: 50%;
   position: absolute;
   left: 10.8%;
+  font-size: 0.01rem;
 }
 
 /*============== BUTTON ANIMATION ==============*/
