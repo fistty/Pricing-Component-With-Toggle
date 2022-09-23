@@ -7,7 +7,7 @@ let toggled = false;
 
 toggleButton.addEventListener("click", () => {
   if (!toggled) {
-    /* REMOVES BALL-BACKWARD CLASS SET TO IT IN LINE 16 */
+    /* REMOVES BALL-BACKWARD CLASS SET TO IT IN LINE 12 */
     ball.classList.remove("ball-backward");
     ball.classList.add("ball-forward");
     annualPrice.forEach((item) => {
@@ -21,7 +21,7 @@ toggleButton.addEventListener("click", () => {
   }
 
   if (toggled) {
-    /* ADDS BALL FORAWARD SET ON LINE 10 */
+    /* ADDS BALL FORAWARD SET ON LINE 12 */
     ball.classList.remove("ball-forward");
     ball.classList.add("ball-backward");
     annualPrice.forEach((item) => {
